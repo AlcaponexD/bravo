@@ -2,6 +2,8 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-cors" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/beyondcode/laravel-dump-server" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
@@ -107,6 +109,8 @@
     <orderEntry type="module-library">
       <library name="PHP" type="php">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
+          <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-cors" />
           <root url="file://$MODULE_DIR$/vendor/beyondcode/laravel-dump-server" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
@@ -196,6 +200,8 @@
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
         </CLASSES>
         <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/asm89/stack-cors" />
+          <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-cors" />
           <root url="file://$MODULE_DIR$/vendor/beyondcode/laravel-dump-server" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/dnoegel/php-xdg-base-dir" />
