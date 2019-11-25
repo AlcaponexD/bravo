@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class EnchangeRate extends Model
 {
-    protected $table = 'enchange_rates';
+    protected $table = 'exchange_rates';
 
     protected $fillable = [
         'to',
