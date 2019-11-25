@@ -13,7 +13,7 @@ class EnchangeRates extends Migration
         */
         public function up()
     {
-        Schema::create('table_exchange_rates', function (Blueprint $table) {
+        Schema::create('exchange_rates', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('to',4)->unique()->comment('moeda de origem');
             $table->string('from',4)->unique()->comment('moeda de destino');
@@ -32,6 +32,6 @@ class EnchangeRates extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_exchange_rates');
+        Schema::dropIfExists('exchange_rates');
     }
 }
