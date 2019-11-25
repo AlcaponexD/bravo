@@ -14,6 +14,6 @@ use Illuminate\Http\Request;
 */
 Route::post('/login','API\LoginController@login')->name('login');
 
-Route::group(['prefix' => 'admin','middleware' => ['cors', 'auth:users']], function() {
-
+Route::group(['prefix' => 'admin','middleware' => ['auth:api']], function() {
+    Route::resource('enchange','API\ExchangeRateController');
 });
