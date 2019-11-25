@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ExchangeRate extends FormRequest
+class ExchangeRateUpdate extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,17 +24,14 @@ class ExchangeRate extends FormRequest
     public function rules()
     {
         return [
-            'to' => 'required|unique:exchange_rates',
-            'from' => 'required|unique:exchange_rates',
-            'value' => 'required'
+            'to' => 'unique:exchange_rates',
+            'from' => 'unique:exchange_rates',
+            'value' => 'nullable'
         ];
     }
     public function messages()
     {
         return [
-            'to.required' => ':attribute é requerido',
-            'from.required' => ':attribute é requerido',
-            'value.required' => ':attribute é requerido',
             'from.unique' => ':attribute já existe no banco de dados',
             'to.unique' => ':attribute já existe no banco de dados'
         ];
