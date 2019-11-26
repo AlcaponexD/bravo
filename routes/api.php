@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 */
 Route::post('/login','API\LoginController@login')->name('login');
 Route::get('/conversion','API\ConversionController@show')->name('conversion');
+Route::get('/list-countries','API\ExchangeRateController@index');
 
 Route::group(['prefix' => 'admin','middleware' => ['auth:api']], function() {
     Route::resource('enchange','API\ExchangeRateController');

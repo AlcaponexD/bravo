@@ -15,8 +15,8 @@ class EnchangeRates extends Migration
     {
         Schema::create('exchange_rates', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('to',4)->unique()->comment('moeda de origem');
-            $table->string('from',4)->unique()->comment('moeda de destino');
+            $table->string('to',4)->comment('moeda de origem');
+            $table->string('from',4)->comment('moeda de destino');
             $table->double('value',5)->comment('taxa de conversao da moeda de origem para destino');
             $table->unsignedBigInteger('user_id')->comment('usuário que adicinou a taxa');
 

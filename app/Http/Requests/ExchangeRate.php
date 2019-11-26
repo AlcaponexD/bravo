@@ -24,8 +24,8 @@ class ExchangeRate extends FormRequest
     public function rules()
     {
         return [
-            'to' => 'required|unique:exchange_rates',
-            'from' => 'required|unique:exchange_rates',
+            'to' => 'required',
+            'from' => 'required',
             'value' => 'required'
         ];
     }
@@ -35,8 +35,6 @@ class ExchangeRate extends FormRequest
             'to.required' => ':attribute é requerido',
             'from.required' => ':attribute é requerido',
             'value.required' => ':attribute é requerido',
-            'from.unique' => ':attribute já existe no banco de dados',
-            'to.unique' => ':attribute já existe no banco de dados'
         ];
     }
 }

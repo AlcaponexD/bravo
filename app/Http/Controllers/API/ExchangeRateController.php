@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Models\ExchangeRate;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ExchangeRate as Exc;
 use App\Http\Requests\ExchangeRateUpdate as ExcUp;
@@ -58,7 +59,7 @@ class ExchangeRateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ExcUp $request, $id)
+    public function update(Request $request, $id)
     {
         $rate = ExchangeRate::findOrFail($id);
         $user = Auth::user();
