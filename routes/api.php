@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 Route::post('/login','API\LoginController@login')->name('login');
+Route::get('/conversion','API\ConversionController@show')->name('conversion');
 
 Route::group(['prefix' => 'admin','middleware' => ['auth:api']], function() {
     Route::resource('enchange','API\ExchangeRateController');
